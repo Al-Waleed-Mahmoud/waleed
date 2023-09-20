@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test page</title>
+<!-- ---------------------------------[start Styling]------------------------------ -->
+<style>
+    *{
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-image: linear-gradient(to right, darkblue, lightblue);
+
+}
+.container{
+    margin-top: 180px;
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    font-size: 100px;
+    padding: 20px;
+    color: #e6e6e6;
+    margin: 0;
+    
+}
+h3{
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #e6e6e6;
+}
+
+input{
+    width: 250px;
+    display: block;
+    text-align: center;
+    margin: 5px auto;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    outline: 0;
+
+}
+input:last-of-type{
+    width: 150px;
+    margin-top: 30px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #e6e6e6;
+    background-color: darkblue;
+    border-radius: 20px;
+    transition: all .5s;
+
+}
+input:last-of-type:hover{
+    background-color: lightblue;
+    color: darkblue;
+    font-weight: bolder;
+
+}
+
+p{
+    font-size: 21px;
+    color: #e6e6e6;
+    font-weight: bold;
+    margin-top: 50px;
+    opacity: 0;
+}
+
+footer{
+    margin-top: 235px;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    opacity: .5;
+}
+footer:hover{
+    color: #e6e6e6;
+}
+</style>
+<!-- ---------------------------------[End Styling]------------------------------ -->
+
+</head>
+<body>
+    <div class="container">
+        <h2>BMI</h2>
+    
+            <h3 for="weight">your weight</h3>
+            <input id="weight" type="text" placeholder="أدخل وزنك ">
+            <h3 for="length">your length</h3>
+            <input id="length" type="text" placeholder="أدخل طولك">
+            <input id="btn" type="submit" value="count">
+
+        <p id="myP"> </p>
+    </div>
+    
+<footer>by Waleed Mahmoud &copy; 2022</footer>
+
+
+<!-- ---------------------------------[Start Scripting]------------------------------ -->
+<script>
+
+let myBtn = document.getElementById("btn")
+let myP = document.getElementById("myP")
+let bmi;
+myBtn.addEventListener("click", function(){
+    let theweight = document.getElementById("weight").value;
+    let thelength = document.getElementById("length").value;
+    myP.style.opacity = 1;
+
+if (typeof (parseInt(theweight)) === 'number' && typeof (parseInt(thelength)) === "number") {
+ bmi = theweight / (thelength * thelength)
+ 
+ console.log(typeof bmi);
+ console.log(bmi);
+ if(bmi < 18){
+    myP.innerHTML = '🎂تعاني من نحافة';
+} else if(bmi >= 18 && bmi <= 24.9){
+    myP.innerHTML = '👏وزنك مثالي';
+
+}else if(bmi >= 25 && bmi <= 29.9){
+    myP.innerHTML = '🤦‍♂️وزنك زائد';
+
+}else if(bmi >= 30 && bmi <= 34.9){
+    myP.innerHTML = '🤦‍♂️تعاني من سمنة درجة أولى';
+
+}else if(bmi >= 35 && bmi <= 39.9){
+    myP.innerHTML = '🤦‍♂️تعاني من سمنة درجة ثانية';
+
+} else if(bmi >= 40){
+    myP.innerHTML = '🤢تعاني من سمنة خطيرة';
+
+}else if(bmi === NaN || bmi === null || bmi === Boolean){
+    myP.innerHTML = 'تأكد من صحة البيانات التي أدخلتها';
+
+} else{
+    myP.innerHTML = 'تأكد من صحة البيانات التي أدخلتها';
+
+}
+
+}
+});
+
+
+
+
+
+</script>
+
+<!-- ---------------------------------[end Scripting]------------------------------ -->
+</body>
+</html>

@@ -1,0 +1,951 @@
+/* -------------------------[start icon section] --------------*/
+@font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?kohkxw');
+  src: url('../fonts/icomoon.eot?kohkxw#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?kohkxw') format('truetype'),
+    url('../fonts/icomoon.woff?kohkxw') format('woff'),
+    url('../fonts/icomoon.svg?kohkxw#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  /* speak: never; */
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-arrow-left:before {
+  content: '\f060';
+}
+.icon-arrow-right:before {
+  content: '\f061';
+}
+.icon-arrow-up:before {
+  content: '\f062';
+}
+.icon-twitter-square:before {
+  content: '\f081';
+}
+.icon-youtube-play:before {
+  content: '\f16a';
+}
+.icon-facebook2:before {
+  content: '\ea91';
+}
+.icon-whatsapp:before {
+  content: '\ea93';
+}
+.icon-telegram:before {
+  content: '\ea95';
+}
+.icon-youtube:before {
+  content: '\ea9d';
+}
+
+.icon-twitter-square,
+.icon-whatsapp,
+.icon-telegram,
+.icon-youtube-play,
+.icon-facebook2 {
+  font-size: 30px;
+}
+.icon-twitter-square,
+.icon-youtube-play {
+  font-size: 35px;
+}
+.icon-arrow-right,
+.icon-arrow-left {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  line-height: 50px;
+  font-size: 20px;
+  color: #eee;
+  /* background-color: #00405d; */
+  position: fixed;
+  left: -15px;
+  top: 27rem;
+  transition: 0.5s;
+  z-index: 99999999999;
+}
+.icon-arrow-right.rotate,
+.icon-arrow-left.rotate {
+  transform: rotate(180deg);
+}
+/* -------------------------[End icon section] --------------*/
+
+/* -------------------------[start scroll icon section] --------------*/
+section.scroll {
+  width: 50px;
+  height: 50px;
+  background-color: #ddd;
+  position: fixed;
+  bottom: 150px;
+  right: 10px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor: pointer;
+  transition: 0.4s;
+}
+section.scroll:hover {
+  opacity: 0.5;
+}
+.icon-arrow-up {
+  font-size: 30px;
+  color: #00405d;
+}
+
+/* -------------------------[End scroll icon section] --------------*/
+
+/* ----------------------[ Start Main Rules ]------------------------ */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-color: rgb(95, 62, 187);
+  --second-color: rgb(142, 142, 211);
+  --third-color: rgb(204, 204, 223);
+  --forth-color: #3366cc;
+  --font-color: #eee;
+  --font-color-2: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* ----------------------[ End Main Rules ]------------------------ */
+
+/* ----------------------[ Start Fixed Section ]------------------------ */
+.fixed-section {
+  width: 50px;
+  min-height: 130px;
+  background-color: rgb(226, 224, 224);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 10rem;
+  left: 0;
+  z-index: 99999999;
+  padding: 0.5rem;
+  padding-top: 1rem;
+  border-radius: 50px;
+}
+
+.fixed-section ul {
+  list-style: none;
+}
+.fixed-section ul li a {
+  text-decoration: none;
+}
+.fixed-section ul li {
+  text-align: center;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.fixed-section ul li:hover {
+  transform: scale(1.2);
+}
+.fixed-section a.icon-twitter-square {
+  color: #55acee;
+}
+.fixed-section a.icon-youtube-play {
+  color: #cd201f;
+}
+.fixed-section a.icon-facebook2 {
+  color: #3b5998;
+}
+.fixed-section a.icon-whatsapp {
+  color: #43d854;
+}
+.fixed-section a.icon-telegram {
+  color: #00405d;
+}
+.fixed-section.show {
+  opacity: 0;
+}
+
+/* ----------------------[ End Fixed Section ]------------------------ */
+
+/* ----------------------[ Start Header Section ]------------------------ */
+.header_section {
+  box-shadow: 5px 1px 10px rgb(219, 202, 202);
+  text-transform: capitalize;
+  position: relative;
+  background-color: rgb(150, 116, 116);
+  font-family: tahoma, Times, serif;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  color: var(--font-color);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  margin-left: -15px;
+  transition: all 0.5s linear;
+  font-family: 'Righteous', 'cursive';
+}
+
+.navbar-brand:hover {
+  transform: scale(1.1);
+  color: var(--font-color);
+}
+button.navbar-toggler {
+  outline: 0;
+}
+
+.navbar-toggler-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.navbar-toggler-icon span {
+  width: calc(100% - 10px);
+  height: 8px;
+  background-color: #eee;
+  display: block;
+  margin: 2px;
+  border-radius: 25px;
+}
+
+button.navbar-toggler {
+  margin-right: -10px;
+}
+
+li.nav-item a {
+  font-size: 18px;
+  color: var(--font-color);
+  text-align: center;
+  /* padding-top: 15px; */
+  font-weight: 500;
+  position: relative;
+  transition: all 0.5s linear;
+}
+
+li.nav-item:hover a {
+  transform: scale(1.1);
+}
+
+li.nav-item a::before {
+  content: '';
+  width: 0%;
+  height: 3px;
+  position: absolute;
+  background-color: var(--font-color);
+  left: 0;
+  bottom: 0px;
+  transition: 0.3s;
+  border-radius: 20px;
+}
+
+li.nav-item a:hover::before {
+  width: 100%;
+}
+
+/* ----------------------[ End Header Section ]------------------------ */
+
+/* ----------------------[ Start About Me Section ]------------------------ */
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    to right,
+    var(--second-color) 30%,
+    var(--third-color)
+  );
+}
+
+.home .row {
+  justify-content: center;
+  align-items: space-around;
+}
+
+.home .info {
+  padding: 3rem;
+  flex-basis: 50%;
+}
+
+.home .info h4 {
+  font-size: 3rem;
+  font-family: tahoma, Times, serif;
+  font-weight: bold;
+  color: var(--font-color);
+  letter-spacing: 5px;
+}
+
+.home .info p {
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 25px;
+  line-height: 1.6;
+  color: var(--font-color-2);
+}
+.home .info p span {
+  color: rgb(85, 68, 68);
+  position: relative;
+}
+.home .info p span:first-of-type {
+  letter-spacing: 5px;
+  font-weight: 600;
+}
+.home .info p span::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  border-radius: 10px;
+  left: 0;
+  bottom: -5px;
+  background-color: var(--third-color);
+  transition: all 0.5s;
+}
+
+.home .info p span:hover::before {
+  width: 100%;
+  font-weight: bold;
+}
+
+.home a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  width: 10rem;
+  display: flex;
+  padding: 1rem;
+  border: 1px solid #eee;
+  text-align: center;
+  color: var(--font-color);
+  border-radius: 30px;
+  text-decoration: none;
+  position: relative;
+  padding-left: 1.5rem;
+  transition: all 0.5s;
+  margin-top: 5rem;
+}
+
+.home a:hover {
+  background-color: var(--third-color);
+  color: var(--font-color-2);
+}
+
+.home a::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-image: url(../image/right.png);
+  background-repeat: no-repeat;
+  right: -12px;
+  top: 20px;
+}
+.home .photo {
+  flex-basis: 50%;
+  background-image: url(../image/Untitled-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* background-position: center; */
+  flex-basis: 50%;
+  border-radius: 50%;
+  opacity: 0.5;
+  transition: opacicty, 0.5s;
+}
+/* .home img {
+
+} */
+
+/* .home img:hover {
+  opacity: 1;
+} */
+
+/* ----------------------[ End Home section ]------------------------ */
+
+/* ----------------------[ start About Me section ]------------------------ */
+.about-me {
+  position: relative;
+  width: 100vw;
+  /* background-color: #232423; */
+  background-color: #232423;
+  padding-bottom: 7rem;
+}
+
+.about-me .row {
+  justify-self: space-between;
+}
+
+.about-me::before {
+  content: ' ';
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  filter: grayscale(90px);
+  background-image: url(../image/info-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100% 200px;
+  top: -45px;
+}
+
+.about-me .some-info h3 {
+  font-size: 2.5rem;
+  color: var(--font-color);
+  padding-top: 3rem;
+  z-index: 99999999;
+  text-align: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+.about-me .some-info h3::before {
+  content: '';
+  width: 11rem;
+  height: 3px;
+  position: absolute;
+  background-color: #eee;
+  bottom: -5px;
+  margin: auto;
+}
+
+.about-me .easy-profile {
+  color: var(--font-color-2);
+  border: 1px solid #eee;
+  padding: 2rem;
+  background-color: var(--third-color);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.about-me .easy-profile ul {
+  list-style-position: inside;
+}
+
+.about-me .my-skills {
+  padding: 2rem;
+  color: rgb(238, 222, 222);
+  border: 1px solid #eee;
+  background-color: #17a2b8d1;
+  margin-bottom: 10px;
+}
+
+.about-me .my-skills h4 {
+  margin-bottom: 3rem;
+  font-size: 40px;
+  text-align: center;
+}
+
+.skill-title {
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  font-size: 25px !important;
+  text-align: left !important;
+}
+
+.about-me .my-skills .skills {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.skill-card {
+  flex-basis: 23%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.skill-progress {
+  width: 100px;
+  height: 100px;
+  background: conic-gradient(#d0cbd6 3.6deg, #eee 0deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  position: relative;
+}
+
+.skill-progress::before {
+  content: '';
+  width: 90px;
+  height: 90px;
+  background-color: rgb(77, 70, 70);
+  border-radius: 50%;
+  position: absolute;
+}
+.skill-progress span {
+  z-index: 222;
+  color: #eee;
+  font-size: 1.5rem;
+}
+span.Learning {
+  font-size: 18px !important;
+}
+.skill-card p {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.myCV {
+  width: 200px;
+  padding: 15px;
+  background-color: #17a2b8d1;
+  font-size: 22px;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  font-weight: 600;
+  transition: all 0.5s;
+  border-radius: 10px;
+  box-shadow: 0px 6px 11px -2px rgba(216, 155, 216, 0.658);
+}
+.myCV a {
+  color: #eee;
+  text-decoration: none;
+}
+.myCV:hover {
+  transform: scale(1.1);
+}
+
+/* ----------------------[ End About Me section ]------------------------ */
+
+/* ----------------------[ Start My Services section ]------------------------ */
+.my-services {
+  padding: 3rem;
+  background-color: var(--third-color);
+  padding-bottom: 80px;
+}
+
+.my-services h3 {
+  text-align: center;
+  margin-top: 5rem;
+  position: relative;
+}
+.my-services h3.serT::before {
+  content: '';
+  width: 9rem;
+  height: 3px;
+  position: absolute;
+  background-color: #eee;
+  bottom: -10px;
+  margin: auto;
+}
+
+.my-services p {
+  margin-top: 2rem;
+  line-height: 1.6;
+  margin-bottom: 4rem;
+}
+
+.my-services p.second-ser-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.my-services .row {
+  justify-content: space-between !important;
+  align-items: center;
+}
+.my-services .ser-1,
+.my-services .ser-2 {
+  margin-top: 10px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+  transition: 0.3s;
+  height: 445px;
+  cursor: pointer;
+}
+
+.my-services img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+.my-services h4 {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.my-services .ser-1:hover,
+.my-services .ser-2:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 6px 3px rgb(129, 110, 110, 16%);
+}
+
+.my-services .ser-description {
+  padding: 15px;
+  line-height: 1.7;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+}
+.my-services .social-apps {
+  list-style: none;
+  text-align: left;
+  padding-left: 45px;
+  margin-top: -75px;
+  font-weight: 600;
+}
+
+/* ----------------------[ start My Projects section ]------------------------ */
+.my-projects {
+  width: 100vw;
+  background-image: linear-gradient(
+    to right,
+    var(--third-color),
+    var(--second-color) 50%
+  );
+  padding: 2rem;
+  padding-bottom: 7rem;
+}
+
+.my-projects h3 {
+  text-align: center;
+  margin-top: 5rem;
+  position: relative;
+}
+.my-projects h3.proT::before {
+  content: '';
+  width: 9rem;
+  height: 3px;
+  position: absolute;
+  background-color: #eee;
+  bottom: -10px;
+  margin: auto;
+}
+
+.my-projects a {
+  display: block;
+  text-decoration: none;
+  margin-top: 2rem;
+  padding: 1rem;
+  transition: 0.5s;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.my-projects a:hover {
+  transform: scale(1.1);
+  box-shadow: inset 0 0 6px 3px rgba(231, 221, 221, 0.16);
+}
+
+.my-projects a h4 {
+  color: var(--font-color);
+}
+
+.my-projects a p {
+  padding: 0.3rem;
+  line-height: 1.6;
+  color: var(--font-color-2);
+  font-size: 17px;
+  transition: 0.5s;
+}
+
+.my-projects a:hover p {
+  color: #000;
+}
+
+/* ----------------------[ End My Projects section ]------------------------ */
+
+/* ----------------------[ Start Contact Me section ]------------------------ */
+.contact-me {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
+  background-image: linear-gradient(to right, #555, #333, #888);
+}
+
+.contact-me h3 {
+  color: var(--font-color);
+  text-align: center;
+  position: relative;
+}
+.contact-me h3.conT::before {
+  content: '';
+  width: 9rem;
+  height: 3px;
+  position: absolute;
+  background-color: #eee;
+  bottom: -10px;
+  margin: auto;
+}
+
+.contact-me .contact-form {
+  width: 100%;
+  margin-top: 5rem;
+  color: var(--font-color);
+  background-color: #555;
+  padding: 1rem;
+  padding-left: 2rem;
+  text-transform: capitalize;
+  box-shadow: 0px 0px 10px 2px rgba(171, 171, 171, 0.5);
+}
+
+.contact-me .contact-form input,
+.contact-me .contact-form textarea {
+  width: 80%;
+  display: block;
+  margin: 1.5rem auto;
+  padding: 0.3rem;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #888;
+  color: var(--font-color);
+  text-transform: capitalize;
+}
+
+.contact-me .contact-form input:last-of-type {
+  width: 80%;
+  margin: auto;
+  margin-top: 2rem;
+  background-color: #888;
+  box-shadow: 0 3px 20px 3px rgba(170, 170, 170, 0.329);
+  letter-spacing: 0.2rem;
+  padding: 1rem;
+  border-radius: 30px;
+  font-size: 25px;
+  transition: 0.5s;
+}
+
+.contact-me .contact-form input:last-of-type:hover {
+  box-shadow: 0 0 15px -2px rgb(135, 153, 189);
+}
+
+/* ----------------------[ End Contact Me section ]------------------------ */
+
+/* ----------------------[ start Footer section ]------------------------ */
+.footer {
+  background-color: #222;
+  padding: 1.5rem;
+}
+
+.footer p {
+  text-align: center;
+  color: var(--font-color);
+  text-transform: capitalize;
+  font-size: 17px;
+  margin-bottom: 0;
+}
+
+.footer p a {
+  font-weight: bold;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--font-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer a:hover {
+  color: #aaa;
+}
+
+/* ----------------------[ start Footer section ]------------------------ */
+
+/* ----------------------[ start media query section ]------------------------ */
+/*
+    > Extra extra large  => xxl  = اكبر او يساوي 1400
+    > Extra large        => xl   = اكبر أو يساوي 1200
+    > large screen       => lg   = أكبر أويساوي 992
+    > medium screen      => md   = أكبر أو يساوي 768
+    > small screen       => sm   = اكبر أو يساوي 576
+    > Extra small screen => xs   = أصغر من  576 
+*/
+
+/* ------------[EXtra large screens]---------------- */
+@media (min-width: 1400px) {
+  .header_section::before {
+    width: 30rem;
+    margin-left: -5rem;
+  }
+}
+
+/* ------------[EXtra large screens]---------------- */
+@media (min-width: 1200) {
+  .header_section::before {
+    width: 30rem;
+    margin-left: -5rem;
+  }
+}
+
+/* ------------[Large screens]---------------- */
+@media (min-width: 992px) {
+  .nav-item {
+    font-size: 22px;
+    padding: 5px;
+  }
+
+  /* start home section */
+  .home {
+    padding-top: 8rem;
+  }
+}
+
+/* ------------[Medium screens]---------------- */
+@media (max-width: 992px) {
+  /* start header section */
+  .header_section.container {
+    width: 100vw;
+  }
+
+  .nav-item a:hover {
+    width: 100%;
+    background-color: #717b80;
+  }
+
+  li.nav-item a::before {
+    height: 1px;
+  }
+  li.nav-item a:hover::before {
+    width: 100%;
+  }
+  /* End header section  */
+
+  /* start home section */
+  .home .row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home {
+    padding-top: 8rem;
+  }
+
+  .home .row {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .home .info {
+    flex-basis: 50%;
+  }
+  /* .home .photo {
+    flex-basis: 50%;
+    margin: auto;
+  } */
+  /* .home img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  } */
+
+  .home .info h4 {
+    font-size: 2.2rem;
+  }
+
+  .home .info p {
+    margin-top: 2rem;
+    font-size: 22px;
+  }
+
+  .home .info p span:first-of-type {
+    letter-spacing: 2px;
+  }
+
+  .home a {
+    margin-top: 3rem;
+  }
+  /* End home section*/
+}
+
+/* ------------[Small screens]---------------- */
+
+@media (max-width: 768px) {
+  /* start home section */
+  .home .row {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home {
+    padding-top: 3rem;
+  }
+
+  .home .row {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .home .info {
+    margin: auto;
+    flex-basis: 100%;
+  }
+  .home .photo {
+    flex-basis: 100%;
+    margin: auto;
+  }
+  .home .photo {
+    width: 70%;
+    display: block;
+    margin: auto;
+  }
+
+  .home .info h4 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home .info p {
+    margin-top: 1rem;
+    font-size: 20px;
+  }
+
+  .home .info p span:first-of-type {
+    letter-spacing: 2px;
+  }
+
+  .home a {
+    margin-top: 2rem;
+  }
+  /* End home section*/
+}
+
+@media (min-width: 330px) and (max-width: 576px) {
+  .header_section::before {
+    margin-left: -7rem;
+  }
+  @media (max-width: 330px) {
+    button.navbar-toggler span {
+      border: 1px solid #eee;
+    }
+    .navbar {
+      flex-wrap: nowrap;
+    }
+  }
+}
+@media (max-width: 330px) {
+  .my-services .ser-1 img,
+  .my-services .ser-2 img {
+    margin-top: 10px !important;
+  }
+  .my-services .ser-1:hover,
+  .my-services .ser-2:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}

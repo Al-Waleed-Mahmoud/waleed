@@ -1,0 +1,638 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Cairo', sans-serif;
+}
+
+/* ............................[Start Header Section]...........................  */
+
+ .header {
+    background: url(images/banner.png);
+}
+
+.container {
+    background: url(images/banner.png);
+    background: rgba(4,9,30,0.7);
+    min-height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+nav img {
+    width: 150px;
+}
+
+div.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+div.nav-links ul li {
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+div.nav-links ul li a {
+    color: #fff ;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+div.nav-links ul li::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color: #f44336;
+    display: block;
+    margin: auto;
+    transition: .5s;
+
+
+}
+
+div.nav-links ul li:hover::after {
+    width: 100%;
+    
+}
+
+div.text-box {
+    width: 90%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 40%;
+}
+
+div.text-box h1 {
+    font-size: 65px;
+    text-transform: capitalize;
+}
+
+div.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    text-align: center;
+}
+
+a.hero-btn {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+
+    transition: 1s;
+}
+
+a.hero-btn:hover {
+    border: 1px solid #f44336;
+    background-color: #f44336;
+}
+
+nav .fa-solid {
+    display: none;
+}
+
+
+@media (max-width: 700px) {
+    div.text-box h1 {
+        font-size: 20px;
+    }
+    div.text-box p {
+       
+        font-size: 12px;
+        
+    }
+    div.nav-links ul li {
+        display: block;
+        
+    }
+    div.nav-links ul li::after {
+        background-color: #fff;
+        margin: 0;
+    }
+    div.nav-links ul li:hover::after {
+        width: 50%;
+        
+    }
+    div.nav-links ul{
+        padding: 30px;
+    }
+    div.nav-links {
+        background-color: #f44336;
+        height: 100vh;
+        width: 200px;
+        position: fixed;
+        right: -200px;
+        top: 0;
+        text-align: left;
+        z-index: 9999;
+        transition: .8s;
+    }
+    nav .fa-solid {
+        display: block;
+        color: #fff;
+        font-size: 22px;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+}
+/* ............................[End Header Section]...........................  */
+
+/* ............................[start course Section]...........................  */
+section.course,
+section.campus,
+section.facilities,
+section.testimonials{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+section.course h1,
+section.campus h1,
+section.facilities h1,
+section.testimonials h1  {
+    font-size: 36px;
+    font-weight: 600;
+    text-transform: capitalize;
+
+}
+
+section.course p,
+section.campus p,
+section.facilities p,
+section.testimonials p {
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+div.row {
+    display: flex;
+    margin-top: 5%;
+    justify-content: space-between;
+
+}
+
+div.row .course-col {
+    flex-basis: 31%;
+    background-color: #fff3f3;
+    border-radius: 10px ;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    transition: .5s;
+
+}
+
+div.row .course-col h3 {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    text-transform: capitalize;
+}
+
+
+div.row .course-col:hover {
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.2);
+}
+
+
+@media (max-width: 700px) {
+    .row {
+        flex-direction: column;
+    }
+    
+}
+
+/* ............................[End course Section]...........................  */
+
+
+/* ............................[start course Section]...........................  */
+div.capmpus-col {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+div.capmpus-col img {
+    width: 100%;
+    display: block;
+}
+
+div.capmpus-col div.layer {
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: .5s;
+    
+
+}
+
+div.capmpus-col div.layer:hover {
+    background-color: rgba(226,0,0,0.7);
+}
+
+div.capmpus-col div.layer h3 {
+    width: 100%;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 26px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: .5s;
+}
+
+div.capmpus-col div.layer:hover h3 {
+    bottom: 49%;
+    opacity: 1;
+}
+
+/* ............................[start course Section]...........................  */
+
+/* ------------------------------[Start Facilities Section ]----------------------------------- --> */
+section.facilities div.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+}
+ 
+section.facilities div.facilities-col img {
+    width: 100%;
+    border-radius: 10px;
+}
+ 
+section.facilities div.facilities-col h3 {
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+
+}
+
+section.facilities div.facilities-col p {
+    padding: 0;
+}
+ 
+ 
+ /* ------------------------------[End Facilities Section ]----------------------------------- --> */
+ 
+ /* ------------------------------[start Testimonials Section ]----------------------------------- --> */
+ 
+section.testimonials div.testimonial-col {
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f3;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+
+}
+section.testimonials div.testimonial-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+ 
+section.testimonials div.testimonial-col h3 {
+    margin-top: 15px;
+    text-align: left;
+}
+ 
+section.testimonials div.testimonial-col .fa-solid {
+    color: #f44336;
+}
+
+
+@media (max-width: 700px) {
+    section.testimonials div.testimonial-col img {
+        margin-left: 0px;
+        margin-right: 15px;
+    }
+}
+
+ /* ------------------------------[End Testimonials Section ]----------------------------------- --> */
+ 
+ /* ------------------------------[start Call to Action Section ]----------------------------------- --> */
+ section.cta {
+    width: 80%;
+    margin: 100px auto;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    border-radius: 10px;
+}
+ 
+section.cta h1 {
+    color: #fff;
+    margin-bottom: 40px;
+    padding: 0;
+
+}
+@media (max-width: 700px) {
+    section.cta h1 {
+        font-size: 24px;
+    }
+    
+}
+ 
+ /* ------------------------------[End Call to Action Section ]----------------------------------- --> */
+ 
+ /* ------------------------------[Start footer Section ]----------------------------------- --> */
+ section.footer {
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+ }
+
+ section.footer h4 {
+    margin-bottom: 25px ;
+    margin-top: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+ }
+
+ section.footer p {
+    font-size: 14px;
+    color: #777;
+    font-weight: 300;
+    padding: 10px;
+ }
+
+ section.footer div.icons .fa-brands {
+    color: #f44336;
+    margin: 0 13px;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 18px 0;
+ }
+
+ section.footer .fa-solid{
+    color: #f44336;
+ }
+
+ /* ------------------------------[End footer Section ]----------------------------------- --> */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ------------------------------[Start About page]----------------------------------- --> */
+ section.sub-header {
+    height: 50vh ;
+    width: 100%;
+    background: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.sub-header h1 {
+    text-transform: capitalize;
+    margin-top: 200px;
+}
+
+.about-us {
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+ .about-us  .about-col {
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+
+.about-us  .about-col img {
+    width: 100%;
+
+} 
+
+.about-us  .about-col h1 {
+    padding-top: 0;
+}
+
+.about-us  .about-col h1 {
+    padding: 15px 0 25px ;
+}
+
+.about-us  .about-col p {
+    color: #777;
+}
+
+
+a.red-btn {
+    margin-top: 20px;
+    border: 1px solid #f44336;
+    color: #f44336;
+}
+
+a.red-btn:hover {
+    color: #fff;
+}
+
+ /* ------------------------------[End About page]----------------------------------- --> */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ------------------------------[Start blog page]----------------------------------- --> */
+
+ section.blog-content {
+    width: 80%;
+    margin: auto;
+    padding: 60px 0;
+ }
+
+ section.blog-content .blog-left {
+    flex-basis: 65%;
+ }
+
+ section.blog-content .blog-left h2 {
+    color: #222;
+    font-weight: 600;
+    margin: 30px 0;
+    text-transform: capitalize;
+
+ }
+ 
+ section.blog-content .blog-left img {
+    width: 100%;
+
+ }
+ 
+ section.blog-content .blog-left p {
+    color: #999;
+
+ }
+ 
+ section.blog-content .blog-right {
+    flex-basis: 32%;
+ }
+
+ section.blog-content .blog-right h3 {
+    background-color: #f44336;
+    color: #fff;
+    padding: 7px 0 ;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+ }
+
+ section.blog-content .blog-right div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #555;
+    padding: 8px;
+
+ }
+
+.comment-box {
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+
+
+}
+
+.comment-box h3 {
+    text-align: left;
+}
+
+.comment-box .comment-form textarea,
+.comment-box .comment-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: none;
+    outline: 0;
+    background-color: #f0f0f0;
+}
+
+.comment-box button,
+.contact-col button {
+    margin-top: 20px;
+    color: #f44336;
+    display: inline-block;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    text-transform: capitalize;
+    border: 1px solid #f44336;
+    transition: 1s;
+}
+ 
+.comment-box button:hover,
+.contact-col button:hover {
+    color: #fff;
+    background: #f44336;
+}
+
+
+
+@media (max-width: 700px) {
+    .main-title {
+        font-size: 26px;
+    }
+}
+ /* ------------------------------[End blog page]----------------------------------- --> */
+/* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ////////////////////////////////////////////////////////////////////////////////////////////// */
+ /* ------------------------------[Start contact us page]----------------------------------- --> */
+
+ section.location {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+ }
+ 
+ section.location iframe {
+    width: 100%;
+ }
+
+ section.contact-us {
+    width: 80%;
+    margin: auto;
+    padding: 80px 0;
+ }
+ 
+ section.contact-us .contact-col {
+    flex-basis: 48%;
+    margin-bottom: 30px;
+ }
+ 
+ section.contact-us .contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px ;
+ }
+ 
+ section.contact-us .contact-col div .fa-solid {
+    font-size: 28px;
+    color: #f44336;
+    margin: 10px;
+    margin-right: 30px;
+
+ }
+
+ section.contact-us .contact-col div h5 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+
+ }
+ 
+.contact-col input, 
+.contact-col textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: 0;
+    border: 1px solid #ccc;
+}

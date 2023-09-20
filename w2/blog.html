@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website using HTML & CSS [ University ]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Poppins:wght@100;200;300;400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+<!-- ------------------------------[Start header section]----------------------------------- -->
+    <section class="sub-header">
+        <div class="sub-container">
+            <nav>
+                <a href="index.html"><img src="images/logo.png" alt="logo-image"></a>
+                <div id="minue" class="nav-links">
+                    <i id="closeIcon" class="fa-solid fa-rectangle-xmark"></i>
+                    <ul>
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="about.html">about</a></li>
+                        <li><a href="courses.html">course</a></li>
+                        <li><a href="blog.html">blog</a></li>
+                        <li><a href="contact.html">contact</a></li>
+                    </ul>
+                </div>
+                <i id="OpenIcon" class="fa-solid fa-bars"></i>
+            </nav>
+            <h1 class="main-title">our certificate & online programs for 2022</h1>
+        </div>
+    </section>
+<!-- ------------------------------[End header section]----------------------------------- -->
+<section class="blog-content">
+    <div class="row">
+        <div class="blog-left">
+            <img src="images/certificate.jpg" alt="">
+            <h2>our certificate & online programs for 2022</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a possimus consectetur quas dolorem nam similique, perspiciatis sed nulla praesentium sequi at harum, vero mollitia distinctio. Accusamus ex iusto quod quis rem autem odio delectus fugit consectetur minus nostrum laudantium error enim eveniet at unde illum, facilis sint laboriosam ad.</p>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores eveniet id nisi ipsum? Animi, quisquam fugiat a voluptas neque distinctio nostrum quaerat voluptatibus ea provident saepe atque inventore quae fugit in rem? Cum, temporibus maiores rem enim dolore voluptates ut tempora obcaecati eos ad consectetur aliquam ea magni, atque tempore?</p>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores eveniet id nisi ipsum? Animi, quisquam fugiat a voluptas neque distinctio nostrum quaerat voluptatibus ea provident saepe atque inventore quae fugit in rem? Cum, temporibus maiores rem enim dolore voluptates ut tempora obcaecati eos ad consectetur aliquam ea magni, atque tempore?</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione a possimus consectetur quas dolorem nam similique, perspiciatis sed nulla praesentium sequi at harum, vero mollitia distinctio. Accusamus ex iusto quod quis rem autem odio delectus fugit consectetur minus nostrum laudantium error enim eveniet at unde illum, facilis sint laboriosam ad.</p>
+        <div class="comment-box">
+            <h3>leave a comment</h3>
+            <form class="comment-form">
+                <input type="text" placeholder="Enter Name">
+                <input type="email" placeholder="Enter Email">
+                <textarea  rows="5" placeholder="Your comment"></textarea>
+                <button  class="hero-btn btn-red" type="submit"> post comment </button>
+            </form>
+        </div>
+        
+        
+        
+        </div>
+        <div class="blog-right">
+            <h3>post categories</h3>
+            <div>
+                <span>business analytics</span>
+                <span>21</span>
+            </div>
+            <div>
+                <span>data science</span>
+                <span>28</span>
+            </div>
+            <div>
+                <span>machine learning</span>
+                <span>15</span>
+            </div>
+            <div>
+                <span>computer science</span>
+                <span>34</span>
+            </div>
+            <div>
+                <span>autoCAD</span>
+                <span>42</span>
+            </div>
+            <div>
+                <span>Journalism</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>Journalism</span>
+                <span>22</span>
+            </div>
+            <div>
+                <span>commerce</span>
+                <span>30</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ------------------------------[start Footer Section ]----------------------------------- -->
+    <section class="footer">
+        <h4>about us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, ea dignissimos repellat laborum. <br> sit amet consectetur adipisicing elit. Culpa, ea dignissimos </p>
+        <div class="icons">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+            <i class="fa-brands fa-instagram"></i>
+        </div>
+        <p>made by <i class="fa-solid fa-heart"></i> waleed mahmoud</p>
+    </section>
+
+
+
+
+<!-- ------------------------------[End Footer Section ]----------------------------------- -->
+
+<!-- ------------------------------[Start javaScript ]----------------------------------- -->
+    <script>
+        let OpenIcon = document.querySelector("#openIcon")
+        let closeIcon = document.querySelector("#closeIcon")
+        let Minue = document.querySelector("#minue")
+
+        // minueIcon.addEventListener("click", ()=> theMinue.classList.toggle("show"))
+        OpenIcon.onclick = function(){
+            Minue.style.right = "0"
+        }
+        closeIcon.onclick = function(){
+            Minue.style.right = "-200px"
+        }
+
+    </script>
+</script>
+</body>
+</html>

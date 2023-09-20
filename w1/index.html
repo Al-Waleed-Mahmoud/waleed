@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <link rel="stylesheet"  href="css/style.css">
+</head>
+<body>
+    <div id="preloader"></div>
+
+
+    <div class="container">
+        <nav>
+            <img class="logo" src="images/logo.png" alt="logo">
+            <ul>
+                <li><a href="">home</a></li>
+                <li><a href="">about</a></li>
+                <li><a href="">portfolio</a></li>
+                <li><a href="">services</a></li>
+                <li><a href="">hire me</a></li>
+            </ul>
+            <img src="images/moon.png" alt="m" id="icon">
+            <!-- <img src="images/moon.png" alt="m" id="icon"> -->
+        </nav>
+
+        <div class="info">
+            <h1>I'm <span>Kate</span> amelia</h1>
+            <p>this is my official portfolio website to showcase my all works related to web <br> devlopment and graiphic design</p>
+            <a href="">download CV</a>
+        </div>
+
+        <div class="img-box">
+            <img src="images/pattern.png" alt="pattern-image" class="back-img">
+            <img src="images/girl.png" alt="the girl photo" class="main-img">
+        </div>
+
+        <div class="social-links">
+            <a href=""><i class="fa-brands fa-facebook-square"></i></a>
+            <a href=""><i class="fa-brands fa-twitter-square"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp-square"></i></a>
+            <a href=""><i class="fa-brands fa-telegram-square"></i></a>
+        </div>
+    </div>
+
+<!-- for loader test -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/Yf5d_Zx3AaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+<!-- for loader test -->
+
+
+
+    <!-- ---------------[start dark mode]------------------ -->
+    <script>
+
+       
+        document.querySelector("#icon").addEventListener("click", ()=>{
+
+            document.body.classList.toggle("dark-mode");
+            if(document.body.classList.contains("dark-mode")){
+                document.querySelector("#icon").src = "images/sun.png"
+            } else{
+                document.querySelector("#icon").src = "images/moon.png"
+            }
+        })
+    </script>
+    <!-- ---------------[End dark mode]------------------ -->
+
+
+    <!-- ----------------[start preloder]------------------ -->
+    <script>
+        window.addEventListener("load",()=> {
+            document.querySelector("#preloader").style.display = "none";
+        })
+    </script>
+    <!-- ----------------[End preloder]------------------ -->
+</body>
+</html>

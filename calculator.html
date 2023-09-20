@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #ecf0f3;
+    font-family: sans-serif;
+    outline: none;
+    text-transform: capitalize;
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f3;
+
+}
+
+.calculator {
+    background-color: #ecf0f3;
+    padding: 16px;
+    border-radius: 28px;
+    /* box-shadow:  6px 6px 13px #fff,
+                        5px 5px 13px rgba(0, 0, 0, 16); */
+    box-shadow: 6px 6px 13px #fff,
+                 3px 6px 10px rgb(0 0 0 / 51%);
+    
+    display: grid;
+    grid-template-columns: repeat(4, 66px );
+}
+
+input {
+    grid-column: span 4;
+    height: 68px;
+    width: 258px;
+    background-color: #ecf0f3;
+    /* box-shadow: inset -6px -6px 2px #FFF,
+                inset 1px 3px 13px rgba(0, 0, 0, 16); */
+    /* box-shadow: inset 6px 6px 13px #fff,
+                inset -1px 4px 11px rgba(0, 0, 0, 37%); */
+     box-shadow: inset -2px 4px 6px #fff, 
+                 inset -2px 3px 17px rgb(0 0 0 / 30%);
+    border: 0;
+    border-radius: 32px;
+    color: rgb(70, 70, 70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+button {
+    width: 50px;
+    height: 50px;
+    background-color: #ecf0f3;
+    box-shadow: inset 6px 6px 13px #fff,
+                 -1px 4px 11px rgba(0, 0, 0, 37%);
+    border: 0;
+    border-radius: 50%;
+    margin: 10px;
+    font-weight: bold;
+    font-size: 20px;
+
+
+}
+
+.caculate {
+    width: 120px;
+    border-radius: 42px;
+    box-shadow: inset 6px 6px 13px #fff,
+                -1px 4px 11px rgba(0, 0, 0, 37%);
+    /* box-shadow: inset 6px 6px 13px #FFF,
+                    6px 6px 13px rgba(0, 0, 0, 16); */
+}
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="calculator">
+            <input type="text" placeholder="0" id="inputText">
+            <button onclick="clr()">c</button>
+            <button onclick="del()">del</button>
+            <button onclick="calculate('%')">%</button>
+            <button onclick="calculate('/')">/</button>
+            <button onclick="calculate('7')">7</button>
+            <button onclick="calculate('8')">8</button>
+            <button onclick="calculate('9')">9</button>
+            <button onclick="calculate('*')">*</button>
+            <button onclick="calculate('4')">4</button>
+            <button onclick="calculate('5')">5</button>
+            <button onclick="calculate('6')">6</button>
+            <button onclick="calculate('-')">-</button>
+            <button onclick="calculate('1')">1</button>
+            <button onclick="calculate('2')">2</button>
+            <button onclick="calculate('3')">3</button>
+            <button onclick="calculate('+')">+</button>
+            <button onclick="calculate('.')">.</button>
+            <button onclick="calculate('0')">0</button>
+            <button class="caculate" onclick="result()">=</button>
+        </div>
+    </div>
+
+
+
+
+
+<script>
+    let inputText = document.getElementById("inputText");
+let calculate = (number)=>{
+    inputText.value +=number;
+}
+
+
+let result = ()=> {
+    try{
+        inputText.value=eval(inputText.value)
+    }
+    catch(err){
+        alert("Enter the valid result")
+    }
+}
+
+// clear button 
+let clr = function clr() {
+    inputText.value= " "
+}
+
+// delete btn 
+let del = function clr() {
+    inputText.value= inputText.value.slice(0, -1)
+}
+</script>
+</body>
+</html>
